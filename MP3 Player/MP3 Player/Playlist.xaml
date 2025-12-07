@@ -1,0 +1,63 @@
+﻿<Page x:Class="MP3_Player.Playlist"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="clr-namespace:MP3_Player"
+      Title="Playlist" Background="{StaticResource MacOSBackground}">
+
+    <Grid Margin="30">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <TextBlock Grid.Row="0" Text="Playlists" 
+                   FontSize="32" FontWeight="Bold" 
+                   Foreground="{StaticResource MacOSTextPrimary}"
+                   FontFamily="Segoe UI" Margin="0,0,0,20"/>
+
+        <!-- Playlist Cards -->
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+            <Button Click="test" Background="Transparent" BorderBrush="Transparent" 
+                    HorizontalContentAlignment="Stretch" Cursor="Hand" Margin="0,0,0,20">
+                <Border Background="{StaticResource MacOSCardBackground}" 
+                        CornerRadius="16" Padding="24"
+                        BorderBrush="{StaticResource MacOSBorder}" BorderThickness="1">
+                    <Border.Effect>
+                        <DropShadowEffect BlurRadius="12" ShadowDepth="0" 
+                                          Color="#10000000" Opacity="0.15"/>
+                    </Border.Effect>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Playlist Art -->
+                        <Border Width="120" Height="120" CornerRadius="12" 
+                                Margin="0,0,24,0" ClipToBounds="True">
+                            <Ellipse Width="120" Height="120">
+                                <Ellipse.Fill>
+                                    <ImageBrush ImageSource="pack://application:,,,/Resources/6ac83e964705bd58068ec5ad5fbcf372.jpg" 
+                                               Stretch="UniformToFill"/>
+                                </Ellipse.Fill>
+                            </Ellipse>
+                        </Border>
+
+                        <!-- Playlist Info -->
+                        <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                            <TextBlock Text="❤️ Liked Songs" 
+                                       FontSize="24" FontWeight="Bold" 
+                                       Foreground="{StaticResource MacOSTextPrimary}"
+                                       FontFamily="Segoe UI" Margin="0,0,0,8"/>
+                            <TextBlock Text="Your favorite tracks" 
+                                       FontSize="16" 
+                                       Foreground="{StaticResource MacOSTextSecondary}"
+                                       FontFamily="Segoe UI"/>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+            </Button>
+        </ScrollViewer>
+    </Grid>
+</Page>

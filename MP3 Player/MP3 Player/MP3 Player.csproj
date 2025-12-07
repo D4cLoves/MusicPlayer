@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>MP3_Player</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+	<UseWindowsForms>True</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\6ac83e964705bd58068ec5ad5fbcf372.jpg" />
+    <None Remove="Resources\free-icon-forward-13984121.png" />
+    <None Remove="Resources\free-icon-sound-6619134.png" />
+    <None Remove="Resources\icons8-music-stop-32.png" />
+    <None Remove="Resources\music-note-circle-shape-brand_icon-icons.com_59304.ico" />
+    <None Remove="Resources\previoustrack_113650.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FontAwesome" Version="4.7.0" />
+    <PackageReference Include="MahApps.Metro.IconPacks" Version="5.1.0" />
+    <PackageReference Include="MahApps.Metro.IconPacks.Material" Version="5.1.0" />
+    <PackageReference Include="MaterialDesignInXamlToolkitAddOns" Version="0.0.6" />
+    <PackageReference Include="NAudio" Version="2.2.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="TagLibSharp" Version="2.3.0" />
+    <PackageReference Include="UnitsNet.Serialization.JsonNet" Version="5.50.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\6ac83e964705bd58068ec5ad5fbcf372.jpg" />
+    <Resource Include="Resources\free-icon-forward-13984121.png" />
+    <Resource Include="Resources\free-icon-sound-6619134.png" />
+    <Resource Include="Resources\icons8-music-stop-32.png" />
+    <Resource Include="Resources\music-note-circle-shape-brand_icon-icons.com_59304.ico" />
+    <Resource Include="Resources\previoustrack_113650.png" />
+  </ItemGroup>
+
+</Project>
